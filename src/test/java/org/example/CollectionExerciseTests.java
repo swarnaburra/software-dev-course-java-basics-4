@@ -6,27 +6,38 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import static org.junit.Assert.assertEquals;
+
 public class CollectionExerciseTests {
-    @Test
+    @Test // @Test is an annotation to tell JAVA this is a unit test case
     public void testMakeFruitStringArray() {
         CollectionExercises collectionExercises = new CollectionExercises();
         String[] fruits = collectionExercises.makeFruitStringArray();
-        assert fruits.length == 5;
-        assert fruits[0].equals("apple");
-        assert fruits[1].equals("banana");
-        assert fruits[2].equals("cherry");
-        assert fruits[3].equals("date");
-        assert fruits[4].equals("elderberry");
+        //assert fruits.length == 5;
+        //assert fruits[0].equals("apple");
+        assertEquals(5, fruits.length);
+        assertEquals("apple", fruits[0]);
+        assertEquals("banana", fruits[1]);
+        assertEquals("cherry", fruits[2]);
+        assertEquals("date", fruits[3]);
+        assertEquals("elderberry", fruits[4]);
+
     }
 
     @Test
     public void testMakeFruitStringArrayWithSize() {
         CollectionExercises collectionExercises = new CollectionExercises();
         String[] fruits = collectionExercises.makeFruitStringArrayWithSize(3);
-        assert fruits.length == 3;
-        assert fruits[0].equals("apple");
-        assert fruits[1].equals("apple");
-        assert fruits[2].equals("apple");
+        //assert fruits.length == 3;
+        //assert fruits[0].equals("apple");
+        //assert fruits[1].equals("apple");
+        //assert fruits[2].equals("apple");
+        assertEquals(3, fruits.length);
+        assertEquals("apple", fruits[0]);
+        assertEquals("apple", fruits[1]);
+        assertEquals("apple", fruits[2]);
+
+
     }
 
     @Test
