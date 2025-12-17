@@ -25,7 +25,7 @@ public class CollectionExercises {
         // Use a loop to set every element to "apple"
         // Replace the line below with your implementation
         String[] fruits = new String[size];
-        for(int i = 0; i <fruits.length; i++){
+        for (int i = 0; i < fruits.length; i++) {
             fruits[i] = "apple";
         }
 
@@ -36,8 +36,8 @@ public class CollectionExercises {
         // Create and return a new array of strings containing the first three elements of the given array
         // Replace the line below with your implementation
         String[] topThreeFruits = new String[3];
-        for(int i=0; i <topThreeFruits.length; i++){
-          topThreeFruits[i] = fruits[i];
+        for (int i = 0; i < topThreeFruits.length; i++) {
+            topThreeFruits[i] = fruits[i];
         }
         return topThreeFruits;
     }
@@ -82,17 +82,17 @@ public class CollectionExercises {
     public String lookupAppleColor(HashMap<String, String> fruitMap) {
         // Return the value associated with the key "apple" in the given map, using the get method
         // Replace the line below with your implementation
-      return fruitMap.get("apple");
+        return fruitMap.get("apple");
 
     }
 
     public HashSet<String> makeFruitSet(String fruit1, String fruit2, String fruit3) {
         // Create and return a HashSet of strings with the given values
         // Replace the line below with your implementation
-    HashSet<String> fruits = new HashSet<>();
-    fruits.add(fruit1);
-    fruits.add(fruit2);
-    fruits.add(fruit3);
+        HashSet<String> fruits = new HashSet<>();
+        fruits.add(fruit1);
+        fruits.add(fruit2);
+        fruits.add(fruit3);
         return fruits;
     }
 }

@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class CollectionExerciseTests {
     @Test // @Test is an annotation to tell JAVA this is a unit test case
@@ -22,6 +23,23 @@ public class CollectionExerciseTests {
         assertEquals("date", fruits[3]);
         assertEquals("elderberry", fruits[4]);
 
+    }
+// Negative Test Case
+    @Test
+    public void testFruitsArrayNotGreaterThanFive() {
+        CollectionExercises collectionExercises = new CollectionExercises();
+        String[] fruits = collectionExercises.makeFruitStringArray();
+        assertTrue(fruits.length < 6);
+
+    }
+
+    //Edge Test Case
+    @Test
+    public void testMakeFruitStringArray_NotNull() {
+        CollectionExercises collectionExercises = new CollectionExercises();
+        String[] fruits = collectionExercises.makeFruitStringArray();
+
+        assert fruits != null;
     }
 
     @Test
@@ -40,10 +58,11 @@ public class CollectionExerciseTests {
 
     }
 
+
     @Test
     public void testMakeTopThreeArray() {
         CollectionExercises collectionExercises = new CollectionExercises();
-        String[] fruits = new String[] { "apple", "banana", "cherry", "date", "elderberry" };
+        String[] fruits = new String[]{"apple", "banana", "cherry", "date", "elderberry"};
         String[] topThree = collectionExercises.makeTopThreeArray(fruits);
         assert topThree.length == 3;
         assert topThree[0].equals("apple");
